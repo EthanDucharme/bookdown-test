@@ -1,0 +1,62 @@
+
+# Palmer Penguins {#penguins}
+
+Today we are going to work with the Palmer Penguins dataset from the `palmerpenginus`package. Install the package as follows:
+
+```{r install, eval = FALSE, echo = TRUE}
+install.packages("palmerpenguins")
+```
+
+We are writing this in R Markdown beause you can do all sorts of things in R Markdown, such as embedding code in text: 2 + 2 = `r 2+2`
+
+```{r load, echo = F, message = F}
+library(palmerpenguins)
+library(tidyverse)
+```
+
+## The dataset
+
+Lets take a look at the dataset available in the `palmerpenguins` package:
+
+```{r data, eval = F, echo = F}
+data(package = "palmerpenguins")
+```
+
+```{r penguins, eval = T, echo = TRUE}
+head(penguins)
+```
+
+> "Capturing and measuring penguins was a lot of fun"
+
+### Penguin measurments
+
+The table `penguins` includes the following measurments:
+
+* Bill length;
+* Bill depth;
+* Flipper length;
+* Body mass.
+
+#### Relationship between flipper length and bill length by species
+
+We are going to make a plot showing how flipper length and bill length vary in different species of penguin:
+
+```{r, echo = F, warning = F, fig.align = "center", fig.cap = "My plot"}
+ggplot(penguins, aes(x = flipper_length_mm, y = bill_length_mm, color = species)) + geom_point() +
+  theme_minimal() +
+  labs(x = "Flipper length (mm)", y = "Bill length (mm)", color  = "Species")
+```
+
+For more information about the `palmerpenguins` package, visit [their website](https://allisonhorst.github.io/palmerpenguins/).
+
+
+```{r logo, echo = F, fig.align = "center", fig.cap = "Logo of the palmerpenguins R package", out.width = '30%'}
+knitr::include_graphics("logo.png")
+```
+
+
+
+Referencing Figure \@ref(fig:logo) and Figure \@ref(fig:plot)
+
+
+

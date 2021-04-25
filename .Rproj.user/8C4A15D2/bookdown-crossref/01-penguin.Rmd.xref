@@ -1,0 +1,7 @@
+h1:penguins Palmer Penguins
+h2:the-dataset The dataset
+h3:penguin-measurments Penguin measurments
+h4:relationship-between-flipper-length-and-bill-length-by-species Relationship between flipper length and bill length by species
+fig:echo My plot
+fig:logo Logo of the palmerpenguins R package
+
